@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="bg-light">
+    <header>
+        <nav class="navbar navbar-light  bg-info justify-content-between">
+            <h4 href="/" class="navbar-brandy text-white"><a href="/" class=" text-white"><b>EnglishIT</b></a></h4>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-white my-2 my-sm-0 text-white" type="submit">Search</button>
+            </form>
+        </nav>
+    </header>
+    <div class="container mt-4 p-4 d-flex justify-content-center  ">
+        <div class="question card  mb-3 rounded shadow-lg p-4" id='exam' style="width: 50rem; ">
+            <div class="card-header bg-transparent  text-center rounded">
+                <%= unit.name%>
+            </div>
+            <div class="card-body text-light position-relative ">
+                <div class="position-absolute text-white " id='number-question' style="right:40px; top:30px">10/25</div>
+                <small class="position-absolute text-white type" id='type' style="right:50%; bottom:50px; transform: translateX(50%);">(N)</small>
+                <div class="content bg-info text-center p-5 rounded">
+                    <h3 class="text-white  " id='vocaublary'>
+                        English
+                    </h3>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent border-light row" id='list-option'>
+            </div>
+        </div>
+        <div class="finish text-center card p-4 shadow  " id='finish' style="width: 30rem; display:none; overflow: hidden;">
+            <img src="https://thumbs.dreamstime.com/b/congratulations-banner-colorful-splash-stock-vector-congratulations-banner-colorful-splash-vector-157999321.jpg" alt="" style="width: 22rem;  object-fit: cover;">
+            <div class="content ">
+                <small class="text-secondary">You pass the exam</small>
+                <h1 class=" p-2 text-info" id='percent'>90%</h1>
+                <span>List vocabularies uncorrect</span>
+                <table class="table mt-1">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>English</th>
+                            <th>Vietnamese</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody id='tableUncorrect'>
+                        <tr>
+                            <td>1</td>
+                            <td>English</td>
+                            <td>Vietnamese</td>
+                            <td>Type</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <a href="/" class="btn btn-outline-primary">Home</a>
+        </div>
+    </div>
+    <audio controls id='reading' src="" type="audio/mp3" style="display: none"></audio>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/exam.js"></script>
+</body>
+
+</html>
